@@ -1,66 +1,37 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Fusion Solutions</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <header>
-        <div class="top-bar bg-dark text-white text-center py-1">
-            <p class="mb-0">166 Ruru Road, Christchurch. 03 382 8260</p>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="{% url 'index' %}">
-                    <img src="https://ext.same-assets.com/2649531834/1985984711.jpeg" alt="Fusion Solutions Logo" style="height: 40px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'testimonials' %}">Testimonials</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'gallery' %}">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
-                    </ul>
+{% extends 'base.html' %}
+
+{% block title %}Services - Fusion Solutions{% endblock %}
+
+{% block content %}
+    <section class="hero text-center bg-light p-5 rounded">
+        <h1 class="display-4">Polyethylene Pipe Welding Services</h1>
+    </section>
+        <section class="services-content container mt-5">
+            <div class="service-card">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://ext.same-assets.com/2649531834/480874962.jpeg" alt="Butt Fusion Welding" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <h2>Butt Fusion Welding</h2>
+                        <p>Butt fusion welding is the name given to hot plate welding of thermoplastic pipes. Pipe ends are brought together in the chassis of a machine where two separate pipes ends are clamped, faced square and then brought together against a heater plate under pressure for a period of time that is calculated by the pipe size the thickness off the pipe and the cylinder area of the machine.</p>
+                        <p>The heating phase, sometimes referred to as bead up, is where the pipe ends are pressed against a heated plate for a period of time. This is followed by the heat soak phase where the pressure is reduced to just hold the pipe ends on the hot plate. This allows time for the heat to soak into the material at the pipe ends.</p>
+                        <p>After the heat soak phase, the hot plate is removed and the pipe ends brought together. The time taken to do this is called change over and needs to be as short as possible. The final phase is the welding/cooling time, predetermined subject to pipe diameter and wall thickness.</p>
+                        <p>The welding process allows the technician to produce what are referred to as strings that can be anywhere from 24m up to 1000m depending on the allowable work site. The pipe string is then introduced into the trench where it is joined together either by butt fusion or electrofusion welding.</p>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <main class="container my-5">
-        <section class="hero text-center bg-light p-5 rounded">
-            <h1 class="display-4">Polyethylene Pipe Welding Services</h1>
-        </section>
-        <section class="services-content mt-5">
-            <div class="row mb-4">
-                <div class="col-md-4">
-                    <img src="https://ext.same-assets.com/2649531834/480874962.jpeg" alt="Butt Fusion Welding" class="img-fluid rounded">
-                </div>
-                <div class="col-md-8">
-                    <h2>Butt Fusion Welding</h2>
-                    <p>Butt fusion welding is the name given to hot plate welding of thermoplastic pipes. Pipe ends are brought together in the chassis of a machine where two separate pipes ends are clamped, faced square and then brought together against a heater plate under pressure for a period of time that is calculated by the pipe size the thickness off the pipe and the cylinder area of the machine.</p>
-                    <p>The heating phase, sometimes referred to as bead up, is where the pipe ends are pressed against a heated plate for a period of time. This is followed by the heat soak phase where the pressure is reduced to just hold the pipe ends on the hot plate. This allows time for the heat to soak into the material at the pipe ends.</p>
-                    <p>After the heat soak phase, the hot plate is removed and the pipe ends brought together. The time taken to do this is called change over and needs to be as short as possible. The final phase is the welding/cooling time, predetermined subject to pipe diameter and wall thickness.</p>
-                    <p>The welding process allows the technician to produce what are referred to as strings that can be anywhere from 24m up to 1000m depending on the allowable work site. The pipe string is then introduced into the trench where it is joined together either by butt fusion or electrofusion welding.</p>
-                </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-md-4">
-                    <img src="https://ext.same-assets.com/2649531834/802304204.jpeg" alt="Electrofusion Welding" class="img-fluid rounded">
-                </div>
-                <div class="col-md-8">
-                    <h2>Electrofusion Welding</h2>
-                    <p>The electrofusion welding process involves the use of a moulded socket fitting containing an electrical resistive heating coil. The prepared pipe ends are inserted into the sockets and clamped. An electric current is then passed through the coil for a pre-set time.</p>
-                    <p>Heating of the surrounding polymer and heat transfer to the pipe wall takes place. Cold zones at the ends of the fitting contain the melt in the central section, allowing a high melt pressure to develop and the formation of a homogeneous joint.</p>
-                    <p>The process is more commonly seen in trench to join string and fittings together where butt welding was not able to be achieved efficiently. Each Fusion Solutions welding technician has a calibrated EF welding machine along with multiple rotational peelers and pipe alignment tools to ensure a successful weld is achieved every time.</p>
+            <div class="service-card">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://ext.same-assets.com/2649531834/802304204.jpeg" alt="Electrofusion Welding" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                        <h2>Electrofusion Welding</h2>
+                        <p>The electrofusion welding process involves the use of a moulded socket fitting containing an electrical resistive heating coil. The prepared pipe ends are inserted into the sockets and clamped. An electric current is then passed through the coil for a pre-set time.</p>
+                        <p>Heating of the surrounding polymer and heat transfer to the pipe wall takes place. Cold zones at the ends of the fitting contain the melt in the central section, allowing a high melt pressure to develop and the formation of a homogeneous joint.</p>
+                        <p>The process is more commonly seen in trench to join string and fittings together where butt welding was not able to be achieved efficiently. Each Fusion Solutions welding technician has a calibrated EF welding machine along with multiple rotational peelers and pipe alignment tools to ensure a successful weld is achieved every time.</p>
+                    </div>
                 </div>
             </div>
             <div class="row mb-4">
@@ -87,6 +58,8 @@
                     <a href="{% url 'contact' %}" class="btn btn-primary">Contact Us</a>
                 </div>
             </div>
+        </section>
+        <section>
             <div class="row">
                 <div class="col-md-6">
                     <h2>Plant & Machinery</h2>
@@ -137,9 +110,4 @@
                 </div>
             </div>
         </section>
-    </main>
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p class="mb-0">&copy; Fusion Solutions Christchurch. Web Design & Development by 1080Design</p>
-    </footer>
-</body>
-</html>
+{% endblock %}
