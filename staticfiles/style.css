@@ -246,9 +246,58 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
 }
 
-.card img {
+/* Card Styles */
+.card {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
     width: 100%;
-    border-radius: 5px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #1a4b8c;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.btn-primary {
+    background-color: #1a4b8c;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0d3a7a;
+    transform: translateY(-2px);
 }
 
 .card h3 {
@@ -363,6 +412,29 @@ h1, h2, h3, h4, h5, h6 {
 .service-areas {
     padding: 4rem 0;
     background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Logo container */
+.col-lg-3.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.sitesafe-logo {
+    width: 200px;  /* Increased from 160px */
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    object-fit: contain;
+}
+
+.sitesafe-logo:hover {
+    transform: scale(1.05);
 }
 
 .service-areas h2 {
@@ -547,7 +619,16 @@ footer {
 }
 
 /* Responsive adjustments */
-/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .sitesafe-logo {
+        margin: 0 auto 1.5rem;  /* Center and add bottom margin on mobile */
+    }
+    body {
+        font-size: 1.1rem;  /* Increased from 1rem */
+        line-height: 1.8;   /* Increased from 1.6 */
+    }
+}
+
 @media (max-width: 767.98px) {
     body {
         font-size: 1.1rem;  /* Increased from 1rem */
