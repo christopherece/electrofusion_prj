@@ -42,11 +42,8 @@ We look forward to slowly growing in time
                 </div>
             </div>
         </section>
-        <section class="cta text-center bg-primary text-white p-5 mt-5 rounded">
-            <h2>Talk to us today for more information</h2>
-            <h4>Experts in polyethylene pipe welding solutions with over 15 years experience.</h4>
-            <a href="{% url 'contact' %}" class="btn btn-light btn-lg mt-3">Contact Us</a>
-        </section>
+        {% include 'includes/_talktous.html' %}
+
     </main>
   
 {% endblock %}
