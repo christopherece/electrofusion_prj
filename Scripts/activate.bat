@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set "VIRTUAL_ENV=C:\Users\admsrv\Documents\django_prj\electrofusion_prj"
+set "VIRTUAL_ENV=C:\inetpub\wwwroot\electrofusion_prj"
 
 if not defined PROMPT set PROMPT=$P$G
 

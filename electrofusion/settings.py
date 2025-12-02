@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-5&vhaet3r7ora5ejjqw&)fad8)j89tp()5nft0%72@#(5sec^i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.10.250','pls.plastixwelding.co.nz']
 
 
 # Application definition
@@ -105,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Pacific/Auckland'
 
 USE_I18N = True
 
